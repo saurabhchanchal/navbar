@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
+
 import './App.css';
 
 function App() {
+  const linklist = ["Services", "Projects", "About"]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+     <div className="logo">
+       <img src="https://cdn.afterdawn.fi/v3/news/original/facebook-2015-logo-hi-res.jpg" alt="facebooklogo" />
+     </div>
+     <div className= "link">
+       {linklist.map((el) => {
+        return <p> {el} </p>
+       })}
+     </div>
+     <div className= "button">
+       <button>Contect</button>
+     </div>
+
     </div>
   );
 }
